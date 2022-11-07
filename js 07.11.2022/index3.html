@@ -43,6 +43,17 @@
                     divP.append(p);
                     p.innerText = el.name;
                     constBody.append(divP);
+                    divP.addEventListener("mouseenter", e => {
+                        e.target.classList.add("classBlue");
+                        e.target.classList.remove("classRed");
+                    });
+                    divP.addEventListener("mouseleave", e => {
+                        e.target.classList.add("classRed");
+                        e.target.classList.remove("classBlue");
+                    });
+                    divP.addEventListener("click", e => {
+                        e.target.remove();
+                    });
                 } else {
                     divNP = document.createElement("div");
                     divNP.classList.add("classBlue");
@@ -50,10 +61,21 @@
                     divNP.append(p);
                     p.innerText = el.name;
                     constBody.append(divNP);
+                    divNP.addEventListener("mouseenter", e => {
+                        e.target.classList.add("classRed");
+                        e.target.classList.remove("classBlue");
+                    });
+                    divNP.addEventListener("mouseleave", e => {
+                        e.target.classList.remove("classRed");
+                        e.target.classList.add("classBlue");
+                    });
+                    divNP.addEventListener("click", e => {
+                        e.target.remove();
+                    });
                 }
                 i++;
             }
-        })   
+        })
 </script>
 
 </html>
