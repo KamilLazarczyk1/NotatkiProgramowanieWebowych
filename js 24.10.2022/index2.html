@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>24.10.2022</title>
+    <style>
+        .element {
+            width: 100px;
+            height: 100px;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <div>
+
+    </div>
+    <script defer>
+        const divParent = document.querySelector("div");
+        const div1 = document.createElement("div");
+        const div2 = document.createElement("div");
+        const div3 = document.createElement("div");
+        div1.classList.add("element");
+        div1.style.background = 'red';
+        divParent.appendChild(div1);
+
+        div2.classList.add("element");
+        div2.style.background = 'green';
+        divParent.appendChild(div2);
+
+        div3.classList.add("element");
+        div3.style.background = 'blue';
+        divParent.appendChild(div3);
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js" defer></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="number" min="0" max="100" id="num">
+    <button onclick="fun(); return false;">Wyślij</button>
+    <script>
+        const x = Math.floor(Math.random() * 100);
+        console.log(x);
+        function fun() {
+            let tmp = document.getElementById("num").value;
+            if (tmp == x) {
+                window.alert("Zgadłeś");
+            } else if (tmp > x) {
+                window.alert("Za duzo");
+            } else if (tmp < x) {
+                window.alert("Za malo");
+            }
+        }
+    </script>
+</body>
+</html>

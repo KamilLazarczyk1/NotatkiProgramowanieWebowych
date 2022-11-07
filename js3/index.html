@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>delta</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    let a, b, c = 0
+    function wprowadzanie() {
+        a = parseInt(window.prompt("Podaj a: ")); 
+        b = parseInt(window.prompt("Podaj b: "));
+        c = parseInt(window.prompt("Podaj c: "));
+        if (a == NaN || b == NaN || c == NaN) {
+            wprowadzanie();
+        }
+    }
+    wprowadzanie();
+    let delta = (b ** 2) - (4 * a * c);
+
+    if (delta < 0) {
+        console.log("brak rozwiazan");
+    }
+    else if (delta > 0) {
+        console.log("Dwa pierwiastki: " + (-b - Math.sqrt(delta)) / (2 * a) + ", " + (-b + Math.sqrt(delta)) / (2 * a));
+    } else {
+        console.log("Jeden pierwiastek: " + (-b) / (2 * a));
+    }
+    console.log(a + " " + b + " " + c);
+
+
+</script>
+
+</html>

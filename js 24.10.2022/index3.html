@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>24.10.2022</title>
+    <style>
+        .classRed {
+            background-color: red;
+            width: 100px;
+            height: 100px;
+            float: left;
+        }
+        .classBlue {
+            background-color: blue;
+            width: 100px;
+            height: 100px;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    
+</body>
+<script defer>
+    const ilosc = prompt("Podaj ilość kwadratów");
+    let divP;
+    let divNP;
+    const constBody = document.querySelector("body")
+    for(let i = 0; i<ilosc; i++)
+    {
+        if(i%2)
+        {
+            divP = document.createElement("div");
+            divP.classList.add("classRed");
+            constBody.append(divP);
+        } else
+        {
+            divNP = document.createElement("div");
+            divNP.classList.add("classBlue");
+            constBody.append(divNP);
+        }
+    };
+
+</script>
+</html>
